@@ -1,0 +1,30 @@
+{
+  "name": "zetta-led-pi-driver",
+  "version": "0.1.0",
+  "description": "LED Device for use in Zetta on the Raspberry PI Platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anil614sagar/zetta-led-pi-driver.git"
+  },
+  "keywords": [
+    "zetta",
+    "raspberrypi",
+    "led",
+    "driver"
+  ],
+  "author": "Anil Sagar <anil614sagar@gmail.com> (https://in.linkedin.com/in/anilsagar/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anil614sagar/zetta-led-pi-driver/issues"
+  },
+  "homepage": "https://github.com/anil614sagar/zetta-led-pi-driver",
+  "dependencies": {
+    "onoff": "^1.0.2",
+    "zetta-device": "~0.7.0",
+    "zetta-scout": "~0.3.0"
+  }
+}
