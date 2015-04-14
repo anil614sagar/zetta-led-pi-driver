@@ -1,14 +1,13 @@
 var Device = require('zetta-device');
 var util = require('util');
-var Gpio = require('onoff').Gpio; // Constructor function for Gpio objects.
-     // Export GPIO #14 as an output.
+var Gpio = require('onoff').Gpio;
 
 
 
 var LED = module.exports = function(pin) {
   Device.call(this);
   this.pin = pin;
-  this._pin = new Gpio(18, 'out');
+  this._pin = new Gpio(pin, 'out');
 };
 util.inherits(LED, Device);
 
@@ -71,6 +70,11 @@ LED.prototype.turnOff = function(cb) {
   if (this._timer != undefined) {
     clearInterval(this._timer);
   }
+  this._pin.write(0, function (err) { // Asynchronous write.
+    if (err) {
+      throw err;
+    }
+  });
   this.state = 'off';
   cb();
 };
