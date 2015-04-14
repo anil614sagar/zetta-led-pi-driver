@@ -10,6 +10,7 @@ $ npm install zetta-led-pi-driver --save
 
 ## Usage
 
+```javascript
 var zetta = require('zetta');
 var LED = require('zetta-led-pi-driver');
 
@@ -19,3 +20,4 @@ zetta()
   .listen(1337, function(){
      console.log('Zetta is running..');
 });
+```
